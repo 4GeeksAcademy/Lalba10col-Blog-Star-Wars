@@ -1,0 +1,65 @@
+/* Estilos generales */
+body {
+    background-image: url('https://img2.wallspic.com/crops/4/1/5/8/5/158514/158514-halcn_milenario-han_solo-tatooine-star_wars-ambiente-3840x2160.jpg');
+    background-size: cover; /* Asegura que la imagen cubra toda la pantalla */
+    background-position: center; /* Centra la imagen */
+    background-attachment: fixed; /* Hace que la imagen quede fija mientras se hace scroll */
+    height: 100vh; /* Asegura que ocupe toda la altura de la ventana */
+    margin: 0; /* Elimina márgenes por defecto */
+}
+
+/* Contenedor de las tarjetas con scroll horizontal */
+.scroll-container {
+    display: flex;
+    overflow-x: auto; /* Habilita el desplazamiento horizontal */
+    gap: 20px; /* Espacio entre las tarjetas */
+    padding: 10px; /* Espaciado alrededor */
+    margin: 0 auto; /* Centra el contenedor */
+    white-space: nowrap; /* Mantiene las tarjetas en una fila */
+    -webkit-overflow-scrolling: touch; /* Permite el desplazamiento suave en dispositivos táctiles */
+    flex-wrap: nowrap; /* Evita que las tarjetas se monten unas sobre otras */
+    max-width: 100%; /* Asegura que el contenedor ocupe el ancho completo disponible */
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
+}
+
+/* Ocultar scrollbar visualmente pero mantenerlo funcional */
+.scroll-container::-webkit-scrollbar {
+    height: 8px; /* Ajusta el tamaño del scrollbar */
+    background-color: rgba(0, 0, 0, 0.1); /* Color de fondo del scrollbar */
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.5); /* Color del thumb del scrollbar */
+}
+
+/* Estilo para las tarjetas */
+.people-card {
+    min-width: 250px; /* Evita que las tarjetas se reduzcan demasiado */
+    max-width: 250px; /* Limita el tamaño máximo de las tarjetas */
+    flex-shrink: 0; /* Evita que las tarjetas se encojan */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distribuye los contenidos de las tarjetas */
+    padding: 10px; /* Añade un poco de espacio alrededor */
+    background-color: white; /* Fondo blanco para las tarjetas */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Agrega sombra para destacar las tarjetas */
+}
+
+/* Ajuste del texto dentro de la tarjeta */
+.people-card .card-text {
+    font-size: 14px;
+    overflow: visible; /* Hace visible el texto completo */
+    white-space: normal; /* Permite que el texto se ajuste al tamaño de la tarjeta */
+    word-wrap: break-word; /* Evita que las palabras largas se salgan */
+    text-align: left; /* Alinea el texto a la izquierda */
+    height: 40px; /* Restringe la altura del texto para que no se estire demasiado */
+}
+
+/* Ajuste para los botones dentro de la tarjeta */
+.button-container {
+    display: flex;
+    justify-content: space-between; /* Distribuye los botones en los extremos */
+    align-items: center; /* Centra los botones verticalmente */
+    margin-top: auto; /* Asegura que los botones queden al final de la tarjeta */
+}
