@@ -7,8 +7,6 @@ const PeopleCard = ({ item }) => {
   const { dispatch } = useGlobalReducer();
 
   const addToFavorites = (id, name) => {
-
-
     dispatch({ type: 'add_to_favorite', payload: { "uid": id, "name": name } })
   };
 
